@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Aconchego</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' >
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'><link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<header>
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="">
+        <!-- Logo -->
+        <div class="col-xs-6 col-md-3">
+          <div class="navbar-header" >
+            <a href="index.html"><img src="./Imagens/Logo.JPEG" class="navbar-brand" 
+              style="height: 110px; width: 100px; border-radius: 10px; margin-top: 10px; border: 1px solid white; margin-top: 50px">
+          </div>
+        </div>
+
+        <!-- Barra de navegação -->
+        <div class="col-xs-8 col-md-6">
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 5px;" >
+            <ul class="nav navbar-nav navbar-center" >
+              <li><a class="" href="index.html">Menu</a></li>
+              <li><a class="" href="sobre.html">Sobre</a></li>
+              <li><a class="" href="produtos.html">Produtos</a></li>
+              <li><a class="" href="contatos.html">Contato</a></li>      
+            </ul>
+          </div>
+        </div>
+
+        <!--<div class="col-xs-12 col-md-3">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-services">
+            <a href="#"><i class="fa fa-user "></i>
+              <p>Crie sua Conta/<br>Entrar</p>
+            </a>
+             Barra de navegação - Carrinho
+            <a href="#" class="btn btn-secondary"><i class="fa fa-truck"></i>
+              <p style="margin-bottom: 7px;" >Carrinho</p>
+            </a>
+          </div>
+        </div>-->
+        <div class="container">
+          <div class="teste01">
+            <i class="fa fa-user "></i>
+              <a class="" href="CriarConta.html"><p>Criar Conta</p> 
+              <a class="" href="Entrar.html"><p>Entrar</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <div class="head-search">
+    <div class="container">
+      <!--<div class="row">
+
+          Barra de Navegação - Categorias 
+        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-2">
+          <div class="nav-item dropdown btn-category">
+            <a class="buttonselect " href="#" data-toggle="dropdown" ><span>Categorias</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">
+                  <div class="icon icon-pc icon--dropdown"></div>Categoria1
+                </a></li>
+              <li><a href="#">
+                  <div class="icon icon-pc icon--dropdown"></div>Categoria2
+                </a></li>
+              <li><a href="#">
+                  <div class="icon icon-pc icon--dropdown"></div>Categoria3
+                </a></li>
+              <li><a href="#">
+                  <div class="icon icon-pc icon--dropdown"></div>Categoria4
+                </a></li>
+              <li><a href="#">
+                  <div class="icon icon-pc icon--dropdown"></div>Categoria5
+                </a></li>                      
+            </ul>
+          </div>
+        </div>
+      -->
+      <!-- Barra de navegação - Telefone
+        <div class="hidden-xs col-sm-3 col-md-2 col-lg-2 head-contact">
+          <div class="icon-call"><i class="fa fa-phone" aria-hidden="true"></i></div>
+          <div class="contact-txt">
+            <span>Contate-nos</span><br>000.0000000
+          </div>
+        </div>
+      -->
+        <div class="col-xs-7 col-sm-5 col-md-6 col-lg-6 pr0 ">
+          <form action="" id="" class="search-products">
+            <div class="input-group">
+              <input class="input-big" type="text" name="x" placeholder="Buscar Produtos">
+              <div class="input-group-btn search-panel">
+                <div class="form-group">
+                  <select class="form-control" id="sel1">
+                    <option value="cat0">Todas as Categorias</option>
+                    <option value="cat0">Casa</option>
+                    <option value="cat1">Pet</option>
+                    <option value="cat2">Infantil</option>                    
+                  </select>
+                </div>
+              </div>
+              <span class="input-group-btn">
+                <button class="btn btn-search" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+          <div class="shop-icons">
+            <div class="row">
+
+                 <!-- Barra "Favoritos" Carrinho -->
+              <div class="col-xs-6 col-sm-6 preferiti">
+                <a href="#">
+                  <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                </a>
+              </div>
+            
+              <!-- Barra "Bolsa" Carrinho-->
+              <div class="col-xs-6 col-sm-6 cart dropdown text-right" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  <div class="bag">
+                    <div class="icon"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+                    <div class="num">4</div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-cart" role="menu">
+                  <li>
+                    <span class="item">
+                      <span class="item-left">
+                        <img src="http://via.placeholder.com/40x40" alt="">
+                        <span class="item-info">
+                          <span>Title</span>
+                          <span> R$ 23,00 </span>
+                        </span>
+                      </span>
+                      <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right"><i class="fa fa-times"></i></button>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="item">
+                      <span class="item-left">
+                        <img src="http://via.placeholder.com/40x40" alt="">
+                        <span class="item-info">
+                          <span>Title</span>
+                          <span> R$ 3,00 </span>
+                        </span>
+                      </span>
+                      <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right"><i class="fa fa-times"></i></button>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="item">
+                      <span class="item-left">
+                        <img src="http://via.placeholder.com/40x40" alt="">
+                        <span class="item-info">
+                          <span>Title</span>
+                          <span> R123,00 </span>
+                        </span>
+                      </span>
+                      <span class="item-right">
+                        <button class="btn btn-xs btn-danger pull-right"><i class="fa fa-times"></i></button>
+                      </span>
+                    </span>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a class="text-center" href="#">Carrinho</a></li>
+                </ul>
+
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--IMAGENS DO CENTRO-->
+   <!-- <style>
+    /* Make the image fully responsive */
+   .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>-->
+        </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li class="item1 active"></li>
+      <li class="item2"></li>
+      <li class="item3"></li>
+      <li class="item4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="./Imagens/Logo.JPEG" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Meu aconchego </h3>
+          <p>O ateliê certo para você</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./Imagens/produto.PNG" alt="Chania" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Corujinha</h3>
+          <p>Corujinha peso de porta.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./Imagens/ProdutoII.PNG" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Mascara Infantil</h3>
+          <p>Mascara bordada tamanho infantil</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./Imagens/Logo.JPEG" alt="Flower" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Meu aconchego </h3>
+          <p>O ateliê certo para você</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Activate Carousel
+  $("#myCarousel").carousel();
+    
+  // Enable Carousel Indicators
+  $(".item1").click(function(){
+    $("#myCarousel").carousel(0);
+  });
+  $(".item2").click(function(){
+    $("#myCarousel").carousel(1);
+  });
+  $(".item3").click(function(){
+    $("#myCarousel").carousel(2);
+  });
+  $(".item4").click(function(){
+    $("#myCarousel").carousel(3);
+  });
+    
+  // Enable Carousel Controls
+  $(".left").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+  $(".right").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+});
+
+
+</script>
+<div class="container">
+  <h1 style="font-family: Roboto, sans-serif;">Novidades</h1>
+  <hr>
+  <br>
+  <div clas="row">
+    <div class="col-lg-4">
+      <div class="cartao_Novidades" style="width: 32rem;">
+        <img src="./Imagens/produto.PNG " class="Primeira_imagem">
+        <div class="corpo_Cartao">
+          <div class="cor_Cartao_Ocul">
+            <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+            <h5><center>RS:**,***</center></h5>
+         </div>
+          <hr>
+          <center>
+            <h5 class="titulo_Cartao">Corujão</h5>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="cartao_Novidades" style="width: 32rem;">
+        <img src="./Imagens/ProdutoII.PNG " class="Primeira_imagem">
+        <div class="corpo_Cartao">
+          <div class="cor_Cartao_Ocul">
+            <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+            <h5><center>RS:**,***</center></h5>
+         </div>
+          <hr>
+          <center>
+            <h5 class="titulo_Cartao">Mascara Infantil</h5>
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="cartao_Novidades" style="width: 32rem;">
+        <img src="./Imagens/produto.1PNG.PNG " class="Primeira_imagem">
+        <div class="corpo_Cartao">
+          <div class="cor_Cartao_Ocul">
+            <a href="#" onclick="addCart()" ><center>Adicionar ao Carrinho</center></a>
+            <h5><center>RS:**,***</center></h5>
+         </div>
+          <hr>
+          <center>
+            <h5 class="titulo_Cartao">Cama para Cahorro</h5>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+</body>
+</html>
