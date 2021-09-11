@@ -12,18 +12,19 @@
     border-radius: 10px; 
     border: 1px solid white;  
     margin-left: 30%;
-    background-image: url(/Imagens/logo.JPEG);
+    background-image: url(../Imagens/logo.JPEG);
     background-size: 100% 100%;
 }
 
 .Novo__grid-template{
+  background-image: url(../Imagens/Navbar_back.png);
     height: 31vh;
     width: 100%;
 	grid-template-areas:
 		"logo__Nov Menu Criar"
 		"logo__Nov barra_Buscar incons_Compra"
 		;
-    background-image: url(/Imagens/Navbar_back.png);
+    
     background-size: 100% 31vh;
 }
 .item__Novo {
