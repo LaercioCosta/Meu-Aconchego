@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Meu Aconchego</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' >
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'><link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -100,109 +101,75 @@
     </div>
 </header>
 
-                    <!--Estilização da parte dos produtos-->
-                    <style>
-                     
-                      #Produtos{
-                        width: 15%;
-                        height: 50%;
-                        background: #EBA263;
-                        border-radius: 10px;
-                      }
-
-                      /*Estilização dos produtos*/
-                        
-                      .menu {
-                        float: left;
-                        width: 20%;
-                        text-align: center;
-                      }
-
-                      /*Link dos outros produtos*/
-                      .menu a {
-                        background-color: #e5e5e5;
-                      padding: 4px;
-                        margin-top: 7px;
-                        display: block;
-                        width: 100%;
-                        color: black;
-                      }
-
-                      .main {
-                        float: left;
-                        width: 60%;
-                        padding: 0 20px;
-
-                                              
-                      }
-
-                      .right {
-                        background-color: rgba(230, 230, 230, 0.226);
-                        float: right;
-                        width: 20%;
-                        padding: 5px;
-                        ;
-                      }
-
-                      @media only screen and (max-width: 620px) {
-                        /* For mobile phones: */
-                        .menu, .main, .right {
-                          width: 100%;
-                        }
-                      }
-
-                   
-                      </style>
-                      </head>
-                      <body style="font-family:Verdana;color:rgb(0, 0, 0);">
-                        
-                      <center>
-                      <div style="background-color:#ffffff; padding:5px; text-align:center;">
-                        <h1>Produtos</h1>
-                      </div>
-                    </center>
-
+<br><br><br>
                     <!--Links dos tipos de produtos-->
-                      <div style="overflow:auto">
-                        <div class="menu">
-                          <a href="#">Pet</a>
-                          <a href="#">Casa</a>
-                          <a href="#">Acessórios </a>
-                        </div>
+                    <h2 style="margin-left: 2%;">Categorias</h2>
+                    <hr style="width: 18%;">
+                    
+                    <div class="w3-bar-block w3-snow" style="width:10%; margin-left: 1%; border: 2px solid rgb(255, 255, 255);">
+                      <a href="#" class="w3-bar-item w3-button"> <b>Pet</b> </a>
+                      <a href="#" class="w3-bar-item w3-button"><b>Infantil</b> </a>
+                      <a href="#" class="w3-bar-item w3-button"><b>Casa</b></a>
+                      <a href="*" class="w3-bar-item w3-button"><b>Mascaras</b></a>
+                      <a href="*" class="w3-bar-item w3-button"><b>Acessórios</b></a>
                       
-                        <!--Produto central-->
-                        <div class="main">
-                          <img src="./Imagens/produtoII.PNG" alt="" >
-                        </div>
-                        
-                       
-                      <!--Descrição do produto-->
-                     
-                        <div class="right">
-                          <h2>About</h2>
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
-                            R$**,**
-                          </p>
-                        </div>
-                      </div>
- <!--
-                        <div class="main">
-                          <img src="./Imagens/produtoII.PNG" alt="" >
-                         
-                      
-                        <div class="right">
-                          <h2>About</h2>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                      </div>
-                      
-                      <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
-                  -->
-                      </div>
                     </div>
+                    <br>
+                    <!--Carrosel para as imagens-->
+                    <div class="primeiraImagem" >
+                      <div class="w3-quarter w3-container-red" style="width: 100%; height: 50%;color: rgb(0, 0, 0); "> 
+                        <img src="./Imagens/Logo.JPEG" alt=""; style="width: 170px;border-radius: 2.5px; width:100%;cursor:zoom-in"
+                        onclick="document.getElementById('modal01').style.display='block' ">
+                        <br><br><h4> <strong>Lorem Ipsum</strong> <br> é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,<br><br>
+                          <div class="cor_Cartao_Ocul">
+                           <h5><center>RS:**,***</center></h5>
+                           <a href="carrinho.html" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+                          </div>
+                           <hr>
+                    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                      <div class="w3-modal-content w3-animate-zoom">
+                        <img src="./Imagens/Logo.JPEG" style="width:100%">
                       </div>
-                    </div>
-                  </div>
+                            <div class="cor_Cartao_Ocul">
+                                </h4>
+                        </div>
+                            <!--Carrosel para as imagens-->
+                    <div class="segundaImagem " >
+                      <div class="w3-quarter w3-container-red" style="width: 100%; height: 50%;color: rgb(0, 0, 0); "> 
+                        <img src="./Imagens/Logo.JPEG" alt=""; style="width: 180px; border-radius: 2.5px;">
+                          <br><br><h4> <strong>Lorem Ipsum</strong> <br> é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,<br><br>
+                              <div class="cor_Cartao_Ocul">
+                               <h4><center>RS:**,***</center></h4>
+                                  <div class="cor_Cartao_Ocul">
+                                    <a href="carrinho.html" onclick="addCart()" ><center>Adicionar ao Carrinho</center></a>
+                                 </div>
+                                  <hr>
+                                </h4>
+                        </div>
+                               <!--Carrosel para as imagens-->
+                    <div class="segundaImagem " >
+                      <div class="w3-quarter w3-container-red" style="width: 100%; height: 50%;color: rgb(0, 0, 0);  "> 
+                        <img src="./Imagens/Logo.JPEG" alt=""; style="width: 180px; border-radius: 2.5px;">
+                          <br><br><h4> <strong>Lorem Ipsum</strong> <br> é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI,<br><br>
+                              <div class="cor_Cartao_Ocul">
+                               <h5><center>RS:**,***</center></h5>
+                              
+                               
+                                  <div class="cor_Cartao_Ocul">
+                                    <a href="carrinho.html" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+                                 </div>
+                                  <hr>
+                                </h4>
+                        </div>
+           
+  </div>      
+    </div>
+       </div>
+         </div>
+           </div>
+             </div>
+                 </div>
             </div>
       </div>
     </div>
