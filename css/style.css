@@ -452,7 +452,6 @@ textarea{
 .alterar{
   position: absolute;
   right: 40% ;
-  
 }
 
 .descricao{
@@ -468,10 +467,7 @@ textarea{
     display: grid;
     
 }
-.test01 {
-  visibility: visible;
-  display: flex;
-}
+
 .Novo__Grid .logo__Nov {
     grid-area: logo__Nov; 
     height: 90px; 
@@ -511,20 +507,15 @@ textarea{
     grid-area: Menu__Novo;
     list-style: none; 
     box-sizing: border-box;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
 }
 .Nova__NavBar .item__Novo .Menu__Novo .dropdown-menu{
     background: #e7693b;
-    
     z-index: 9999;
     text-decoration:none;
 }
 .Nova__NavBar .item__Novo .Menu__Novo li a {
     text-decoration:none;
     text-transform:uppercase;
-    width: 100%;
     color: white;}
 
 .Nova__NavBar .item__Novo .Menu__Novo li a:focus,
@@ -532,20 +523,16 @@ textarea{
 .Nova__NavBar .item__Novo .Menu__Novo li a.active{
     color:#E08B53;
 }
-.subContainer{
-    text-align: center;
-    list-style: none; 
-    display: flex; 
-    width: 100%; 
-    padding: 0; 
-    margin: 0; 
-    font-size: 20px; 
-    box-sizing: border-box;
+.Menu__Responsivo {
+  visibility: visible;
+  display: flex;
+  float: left;
 }
-.subContainer > li{
-    width: 100%;
+.Menu__Responsivo a i{
+  font-size: 30px;
 }
 
+/****************CADASTRO**********************/
 .Criar{
     visibility: hidden;
     display: none;
