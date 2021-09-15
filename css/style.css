@@ -28,23 +28,29 @@
     background-size: 100% 31vh;
 }
 .item__Novo {
-	margin: 1px;
-    max-width: 100%;
+	margin: 2px;
+    width: 100%;
     max-height: 100%;
+    background: tomato;
     
 
 }
+.test01 {
+  visibility: hidden;
+  display: none;
+}
+
 .Menu__Novo{
     grid-area: Menu__Novo;
     list-style: none; 
     box-sizing: border-box;
     align-items: center; 
     justify-content: center;
-    max-width: 100%;
+    width: 100%;
 }
 .Nova__NavBar .item__Novo .Menu__Novo .dropdown-menu{
     background: #e7693b;
-    width: 90%;
+    
     z-index: 9999;
     text-decoration:none;
 }
@@ -160,34 +166,7 @@ input[type=search]{
     justify-content: center;
     font-size: 30px;
 }
-.caixaMenu-container{
-    border: solid;
-    margin-top: -100px;
-    
-}
 
-#caixa_menu > ul{
-    text-align: left;
-    justify-content: center;
-    list-style: none;
-    background-color: #DCDCDC;
-    width: 240px;
-    height: 100%;
-    font-size:20px;
-
-}
-#caixa_menu  ul  li{
-    outline: 0;
-    width: 100%;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-#caixa_menu  ul  li a{
-    color:#E08B53;
-    font-size: 25px;
-    text-transform: uppercase;
-}
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
@@ -480,4 +459,138 @@ textarea{
     position: absolute;
     right: 40%;
     margin-top: 17%;
+}
+
+
+/*************************************************************** responsividade ******************************************************/
+@media (max-width: 1023px) {
+  .Novo__Grid{
+    display: grid;
+    
+}
+.test01 {
+  visibility: visible;
+  display: flex;
+}
+.Novo__Grid .logo__Nov {
+    grid-area: logo__Nov; 
+    height: 90px; 
+    width: 80px; 
+    border-radius: 10px; 
+    border: 1px solid white;  
+    margin-left: 30%;
+    background-image: url(../Imagens/Logo.JPEG);
+    background-size: 100% 100%;
+}
+
+.Novo__grid-template{
+  background-image: url(../Imagens/Navbar_back.png);
+    height: 31vh;
+    width: 100%;
+	grid-template-areas:
+		"Menu logo__Nov logo__Nov"
+		"barra_Buscar barra_Buscar barra_Buscar"
+		;
+    
+    background-size: 100% 31vh;
+}
+.item__Novo {
+	  margin: 2px;
+    max-width: 100%;
+    max-height: 100%;
+    background: red;
+    
+
+}
+/******MENU****/
+.Menu__Item{ 
+  visibility: hidden;
+    display: none;
+}
+.Menu__Novo{
+    grid-area: Menu__Novo;
+    list-style: none; 
+    box-sizing: border-box;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+}
+.Nova__NavBar .item__Novo .Menu__Novo .dropdown-menu{
+    background: #e7693b;
+    
+    z-index: 9999;
+    text-decoration:none;
+}
+.Nova__NavBar .item__Novo .Menu__Novo li a {
+    text-decoration:none;
+    text-transform:uppercase;
+    width: 100%;
+    color: white;}
+
+.Nova__NavBar .item__Novo .Menu__Novo li a:focus,
+.Nova__NavBar .item__Novo .Menu__Novo li a:hover,
+.Nova__NavBar .item__Novo .Menu__Novo li a.active{
+    color:#E08B53;
+}
+.subContainer{
+    text-align: center;
+    list-style: none; 
+    display: flex; 
+    width: 100%; 
+    padding: 0; 
+    margin: 0; 
+    font-size: 20px; 
+    box-sizing: border-box;
+}
+.subContainer > li{
+    width: 100%;
+}
+
+.Criar{
+    visibility: hidden;
+    display: none;
+}
+
+.barra_Buscar{
+    grid-area: barra_Buscar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+input[type=search]{
+    box-shadow: 10px 10px 4px (black,.4);
+    background: white;
+    border: 2px solid #e7693b;
+    outline: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px 0 0 15px;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 0 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #68C8C7;
+}
+::placeholder{
+    color: #68C8C7;
+    font-size: .8em;
+}
+.btn_Buscar{
+    box-shadow: 10px 10px 4px rgba(black,0,0,0.,.4);
+    height: 50px;
+    width: 55px;
+    outline: none;
+    border-radius: 0 15px 15px 0;
+    background: #e7693b;
+    color:white;
+    border: none;
+    font-size: 2.3em;
+}
+.incons_Compra{
+  visibility: hidden;
+  display: none;
+
+}
 }

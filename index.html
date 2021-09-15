@@ -4,47 +4,52 @@
   <meta charset="UTF-8">
   <title>Meu Aconchego</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' >
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'><link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
   <header >
-    <div class="Nova__NavBar" >
+    <div class="Nova__NavBar"  style="align-items: center;" >
         <div>
-            <section class="Novo__Grid Novo__grid-template" style="align-items: center" >
+            <section class="Novo__Grid Novo__grid-template" style="align-items: center; " >
                 
                 <a class="logo__Nov" href="index.html">
                     <div class="item__Novo"></div>
                 </a>
 
+                <center>
                 <div class="item__Novo">
                     <div class="Menu__Novo">
                         <div class="subContainer">
-                            <li class="dropdown" style="flex-grow: 1;"> 
-                                <a href="#" class="dropdown-toggle" 
+                            <li class="dropdown test01" style="flex-grow: 1;"> 
+                                <a href="#" class="dropdown-toggle-hide" 
                                 data-toggle="dropdown" role="button" 
-                                aria-expanded="false"><i class="fa fa-bars"></i>Menu
+                                aria-expanded="false"><i class="fa fa-bars" style="font-size: 25px"></i>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a class="drops_menu" href="#">TEST1</a></li>
-                                    <li><a class="drops_menu" href="#">TEST2</a></li>
-                                    <li><a class="drops_menu" href="#">TEST3</a></li>
+                                    <li><a class="drops_menu" href="produtos.html">Produtos</a></li>
+                                    <li><a class="drops_menu" href="sobre.html">Sobre</a></li>
+                                    <li><a class="drops_menu" href="contatos.html">Contato</a></li>
                                     <li class="divider"></li>
-                                    <li class="dropdown-header" style="color: white">Cabeçalho</li>
-                                    <li><a class="drops_menu" href="#">TEST4</a></li>
-                                    <li><a class="drops_menu" href="#">TEST5</a></li>
+                                    <li class="dropdown-header" style="color: white"></li>
+                                    <li><i class="fa fa-user" style="color: white ;"></i>
+                                      <a class="drops_menu" href="Entrar.html">Conta</a>
+                                    </li>
                                 </ul>
 
                             </li>
-                            <li style="flex-grow: 1;"><a class="" href="sobre.html">Sobre</a></li>
-                            <li style="flex-grow: 1;"><a class="" href="produtos.html">Produtos</a></li>
-                            <li style="flex-grow: 1;"><a class="" href="contatos.html">Contato</a></li> 
+                            <li class="Menu__Item"  style="flex-grow: 1;"><a href="sobre.html">Sobre</a></li>
+                            <li class="Menu__Item"  style="flex-grow: 1;"><a href="produtos.html">Produtos</a></li>
+                            <li  class="Menu__Item" style="flex-grow: 1;"><a href="contatos.html">Contato</a></li> 
                         </div>
                     </div>
                 </div>
+              </center>
 
                 <div class="item__Novo">
                     <div class="Criar" >
@@ -56,11 +61,11 @@
                     </div>
                 </div>
 
-                <div class="item__Novo subItens" style="align-items: center">
+                <div class="item__Novo subItens" >
                         <div class="barra_Buscar">
                             <input type="search" placeholder="Buscar Produto"/>
-                            <button type="submit" class="btn_Buscar">
-                                <i class="fa fa-search"></i>
+                            <button type="submit" class="btn_Buscar" style="display:flex; align-items: center;">
+                              <i class="fa fa-search" style="align-items: center; justify-content: center;"></i>
                             </button>
                         </div>
                 </div>
@@ -73,12 +78,13 @@
                             </a>
                         </div>
                         <div class=" " style="margin-left: 20px;">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle-hide" data-toggle="dropdown" role="button" aria-expanded="false">
                                 <div class="bag">
                                 <div class="icon "><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
                                 </div>
                             </a>
                         </div>
+                      </div>
                 </div>
             </section>
         </div>   
@@ -89,157 +95,97 @@
 
 
 
-
-
-
-<div class="container">
-  <div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li class="item1 active"></li>
-      <li class="item2"></li>
-      <li class="item3"></li>
-      <li class="item4"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-
-      <div class="item active">
-        <img src="./Imagens/Logo.JPEG" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Meu aconchego </h3>
-          <p>O ateliê certo para você</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="./Imagens/Logo.JPEG" alt="Chania" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Corujinha</h3>
-          <p>Corujinha peso de porta.</p>
-        </div>
-      </div>
+                                 <!-- Carrosel silide -->
+<br>
+<center>
+  <div id="carouselExampleControlsNoTouching" class="carousel slide carousel-fade " data-bs-touch="false" data-bs-interval="false" style="
+  width: 50%;">
+    <div class="carousel-inner" style="margin: auto;
+    display: block;
     
-      <div class="item">
-        <img src="./Imagens/Logo.JPEG" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Mascara Infantil</h3>
-          <p>Mascara bordada tamanho infantil</p>
-        </div>
+    width: 100%;
+    object-fit: cover;">
+      <div class="carousel-item active">
+        <img src="./Imagens/teste carrosel.jpg" class="d-block w-100"alt="...">
       </div>
-
-      <div class="item">
-        <img src="./Imagens/Logo.JPEG" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Meu aconchego </h3>
-          <p>O ateliê certo para você</p>
-        </div>
+      <div class="carousel-item">
+        <img src="./Imagens/teste.jpg" class="d-block w-100" alt="...">
       </div>
-  
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-<script>
-$(document).ready(function(){
-  // Activate Carousel
-  $("#myCarousel").carousel();
-    
-  // Enable Carousel Indicators
-  $(".item1").click(function(){
-    $("#myCarousel").carousel(0);
-  });
-  $(".item2").click(function(){
-    $("#myCarousel").carousel(1);
-  });
-  $(".item3").click(function(){
-    $("#myCarousel").carousel(2);
-  });
-  $(".item4").click(function(){
-    $("#myCarousel").carousel(3);
-  });
-    
-  // Enable Carousel Controls
-  $(".left").click(function(){
-    $("#myCarousel").carousel("prev");
-  });
-  $(".right").click(function(){
-    $("#myCarousel").carousel("next");
-  });
-});
-
-
-</script>
-<div class="container">
-  <h1 style="font-family: Roboto, sans-serif;">Novidades</h1>
-  <hr>
-  <br>
-  <div clas="row">
-    <div class="col-lg-4">
-      <div class="cartao_Novidades" style="width: 32rem;">
-        <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
-        <div class="corpo_Cartao">
-          <div class="cor_Cartao_Ocul">
-            <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
-            <h5><center>RS:**,***</center></h5>
-         </div>
-          <hr>
-          <center>
-            <h5 class="titulo_Cartao">Teste</h5>
-          </center>
-        </div>
+      <div class="carousel-item">
+        <img src="./Imagens/Logo.JPEG" class="d-block w-100" alt="...">
       </div>
     </div>
-    <div class="col-lg-4">
-      <div class="cartao_Novidades" style="width: 32rem;">
-        <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
-        <div class="corpo_Cartao">
-          <div class="cor_Cartao_Ocul">
-            <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
-            <h5><center>RS:**,***</center></h5>
-         </div>
-          <hr>
-          <center>
-            <h5 class="titulo_Cartao">Teste</h5>
-          </center>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div></center>
+  <br><br>
+
+
+    <div class="container">
+      <h1 style="font-family: Roboto, sans-serif;">Novidades</h1>
+      <hr>
+      <br>
+      <center>
+      <div clas="row" style="display:flex; justify-content:center;">
+        <div class="col-lg-4">
+          <div class="cartao_Novidades" style="width: 90%;">
+            <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
+            <div class="corpo_Cartao">
+              <div class="cor_Cartao_Ocul">
+                <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+                <h5><center>RS:**,***</center></h5>
+            </div>
+              <hr>
+              <center>
+                <h5 class="titulo_Cartao">Teste</h5>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cartao_Novidades" style="width: 90%;">
+            <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
+            <div class="corpo_Cartao">
+              <div class="cor_Cartao_Ocul">
+                <a href="#" onclick="addCart()"><center>Adicionar ao Carrinho</center></a>
+                <h5><center>RS:**,***</center></h5>
+            </div>
+              <hr>
+              <center>
+                <h5 class="titulo_Cartao">Teste</h5>
+              </center>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cartao_Novidades" style="width: 90%;">
+            <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
+            <div class="corpo_Cartao">
+              <div class="cor_Cartao_Ocul">
+                <a href="#" onclick="addCart()" ><center>Adicionar ao Carrinho</center></a>
+                <h5><center>RS:**,***</center></h5>
+            </div>
+              <hr>
+              <center>
+                <h5 class="titulo_Cartao">Teste</h5>
+              </center>
+            </div>
+          </div>
         </div>
       </div>
+    </center>
     </div>
-    <div class="col-lg-4">
-      <div class="cartao_Novidades" style="width: 32rem;">
-        <img src="./Imagens/Logo.JPEG" class="Primeira_imagem">
-        <div class="corpo_Cartao">
-          <div class="cor_Cartao_Ocul">
-            <a href="#" onclick="addCart()" ><center>Adicionar ao Carrinho</center></a>
-            <h5><center>RS:**,***</center></h5>
-         </div>
-          <hr>
-          <center>
-            <h5 class="titulo_Cartao">Teste</h5>
-          </center>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
 
 
 
 
-<!-- partial -->
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
 </html>
