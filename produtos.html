@@ -30,39 +30,40 @@
   <header >
     <div class="Nova__NavBar" >
         <div>
-            <section class="Novo__Grid Novo__grid-template" style="align-items: center" >
-                
-                <a class="logo__Nov" href="index.html">
-                    <div class="item__Novo"></div>
-                </a>
-
+            <section class="Novo__Grid Novo__grid-template">
+              <a class="logo__Nov grid_Logo" href="index.html">
+                  <div class="item__Novo"></div>
+              </a>
+                <center>
                 <div class="item__Novo">
                     <div class="Menu__Novo">
                         <div class="subContainer">
-                            <li class="dropdown" style="flex-grow: 1;"> 
-                                <a href="#" class="dropdown-toggle" 
+                            <li class="dropdown Menu__Responsivo" style="flex-grow: 1;"> 
+                                <a href="#" class="dropdown-toggle-hide" 
                                 data-toggle="dropdown" role="button" 
-                                aria-expanded="false"><i class="fa fa-bars"></i>Menu
+                                aria-expanded="false"><i class="fa fa-bars" style="float: left;"></i>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a class="drops_menu" href="#">TEST1</a></li>
-                                    <li><a class="drops_menu" href="#">TEST2</a></li>
-                                    <li><a class="drops_menu" href="#">TEST3</a></li>
+                                    <li><a class="drops_menu" href="produtos.html">Produtos</a></li>
+                                    <li><a class="drops_menu" href="sobre.html">Sobre</a></li>
+                                    <li><a class="drops_menu" href="contatos.html">Contato</a></li>
                                     <li class="divider"></li>
-                                    <li class="dropdown-header" style="color: white">Cabeçalho</li>
-                                    <li><a class="drops_menu" href="#">TEST4</a></li>
-                                    <li><a class="drops_menu" href="#">TEST5</a></li>
+                                    <li class="dropdown-header" style="color: white"></li>
+                                    <li><i class="fa fa-user" style="color: white ;"></i>
+                                      <a class="drops_menu" href="Entrar.html">Conta</a>
+                                    </li>
                                 </ul>
-
                             </li>
-                            <li style="flex-grow: 1;"><a class="" href="sobre.html">Sobre</a></li>
-                            <li style="flex-grow: 1;"><a class="" href="produtos.html">Produtos</a></li>
-                            <li style="flex-grow: 1;"><a class="" href="contatos.html">Contato</a></li> 
+                            <li class="Menu__Item"  style="flex-grow: 1;"><a href="sobre.html">Sobre</a></li>
+                            <li class="Menu__Item"  style="flex-grow: 1;"><a href="produtos.html">Produtos</a></li>
+                            <li  class="Menu__Item" style="flex-grow: 1;"><a href="contatos.html">Contato</a></li> 
                         </div>
                     </div>
                 </div>
-
-                <div class="item__Novo">
+              </center>
+              
+              <center>
+                <div class="item__Novo grid_Criar">
                     <div class="Criar" >
                         <div class="CriarConta__subcontainer01" >
                             <li style=" margin-right: 7px; "><i class="fa fa-user" style="color: white ;"></i></li>
@@ -71,31 +72,33 @@
                         </div>
                     </div>
                 </div>
+              </center>
 
-                <div class="item__Novo subItens" style="align-items: center">
+                <div class="item__Novo grid_Buscar" >
                         <div class="barra_Buscar">
                             <input type="search" placeholder="Buscar Produto"/>
-                            <button type="submit" class="btn_Buscar">
-                                <i class="fa fa-search"></i>
+                            <button type="submit" class="btn_Buscar" style="display:flex; align-items: center;">
+                              <i class="fa fa-search" style="align-items: center; justify-content: center;"></i>
                             </button>
                         </div>
                 </div>
 
-                <div class="item__Novo">
-                    <div class="item__Novo incons_Compra">
-                        <div class="preferiti" style="margin-right: 20px;">
-                            <a href="#">
-                            <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
-                            </a>
-                        </div>
-                        <div class=" " style="margin-left: 20px;">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <div class="bag">
-                                <div class="icon "><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
-                                </div>
-                            </a>
-                        </div>
-                </div>
+                <div class="item__Novo Grid_Comprar">
+                  <div class="incons_Compra">
+                      <div class="preferiti" style="margin-right: 10px;">
+                          <a href="#">
+                          <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+                          </a>
+                      </div>
+                      <div class=" " style="margin-left: 10px;">
+                          <a href="#" class="dropdown-toggle-hide" data-toggle="dropdown" role="button" aria-expanded="false">
+                              <div class="bag">
+                              <div class="icon "><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+                              </div>
+                          </a>
+                      </div>
+                    </div>
+              </div>
             </section>
         </div>   
     </div>

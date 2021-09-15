@@ -3,9 +3,10 @@
 /*parte ciano do sobre*/
 .Novo__Grid{
     display: grid;
+    align-items: center
     
 }
-.Novo__Grid .logo__Nov {
+.logo__Nov {
     grid-area: logo__Nov; 
     height: 130px; 
     width: 120px; 
@@ -21,8 +22,8 @@
     height: 31vh;
     width: 100%;
 	grid-template-areas:
-		"logo__Nov Menu Criar"
-		"logo__Nov barra_Buscar incons_Compra"
+		"logo__Nov Menu incons_Compra"
+		"logo__Nov barra_Buscar Criar"
 		;
     
     background-size: 100% 31vh;
@@ -31,11 +32,8 @@
 	margin: 2px;
     width: 100%;
     max-height: 100%;
-    background: tomato;
-    
-
 }
-.test01 {
+.Menu__Responsivo {
   visibility: hidden;
   display: none;
 }
@@ -461,22 +459,12 @@ textarea{
 }
 
 
-/*************************************************************** responsividade ******************************************************/
+/*********************************** responsividade ****************************************/
 @media (max-width: 1023px) {
   .Novo__Grid{
     display: grid;
+    max-width: 100%;
     
-}
-
-.Novo__Grid .logo__Nov {
-    grid-area: logo__Nov; 
-    height: 90px; 
-    width: 80px; 
-    border-radius: 10px; 
-    border: 1px solid white;  
-    margin-left: 30%;
-    background-image: url(../Imagens/Logo.JPEG);
-    background-size: 100% 100%;
 }
 
 .Novo__grid-template{
@@ -484,29 +472,40 @@ textarea{
     height: 31vh;
     width: 100%;
 	grid-template-areas:
-		"Menu logo__Nov logo__Nov"
-		"barra_Buscar barra_Buscar barra_Buscar"
-		;
-    
+		"Menu__Responsivo grid_Logo Grid_Comprar"
+		"grid_Buscar grid_Buscar grid_Buscar ";
     background-size: 100% 31vh;
 }
 .item__Novo {
 	  margin: 2px;
     max-width: 100%;
-    max-height: 100%;
-    background: red;
-    
+}
+.grid_Logo {
+  grid-area: grid_Logo; 
+  height: 120px; 
+  width: 120px; 
+  border-radius: 10px; 
+  border: 1px solid white;  
+  background-image: url(../Imagens/Logo.JPEG);
+  background-size: 100% 100%;
 
 }
-/******MENU****/
+
+
+/*****************************MENU********************************/
 .Menu__Item{ 
-  visibility: hidden;
     display: none;
 }
-.Menu__Novo{
-    grid-area: Menu__Novo;
-    list-style: none; 
-    box-sizing: border-box;
+.Menu__Responsivo{
+  grid-area: Menu__Responsivo;
+  list-style: none; 
+  box-sizing: border-box;
+  visibility: visible;
+  display: flex;
+  float: right;
+}
+.Menu__Responsivo a i{
+  font-size: 35px;
 }
 .Nova__NavBar .item__Novo .Menu__Novo .dropdown-menu{
     background: #e7693b;
@@ -523,27 +522,17 @@ textarea{
 .Nova__NavBar .item__Novo .Menu__Novo li a.active{
     color:#E08B53;
 }
-.Menu__Responsivo {
-  visibility: visible;
-  display: flex;
-  float: left;
-}
-.Menu__Responsivo a i{
-  font-size: 30px;
-}
-
-/****************CADASTRO**********************/
-.Criar{
-    visibility: hidden;
+/***************************CADASTRO********************************/
+.grid_Criar{
     display: none;
 }
-
-.barra_Buscar{
-    grid-area: barra_Buscar;
+/******************BARRA DE BUSCA***********************************/
+.grid_Buscar{
+    grid-area: grid_Buscar;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
+}
+.barra_Buscar{
+  width: 100%;
 }
 input[type=search]{
     box-shadow: 10px 10px 4px (black,.4);
@@ -575,9 +564,35 @@ input[type=search]{
     border: none;
     font-size: 2.3em;
 }
-.incons_Compra{
-  visibility: hidden;
-  display: none;
+
+/*********************Lista de Favoritos e Carrinho *****************************/
+.Grid_Comprar{
+  grid-area: Grid_Comprar;
 
 }
+.Grid_Comprar .incons_Compra{
+  float: right;
+}
+.icon .fa{
+  border:3px solid white;
+  padding:11px;
+  border-radius: 100%;
+  color:#FFF;
+  font-size:20px;
+  float: right;
+  margin-right: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 }
