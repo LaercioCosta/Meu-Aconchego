@@ -359,7 +359,7 @@ textarea{
   text-transform: uppercase;
   outline: 0;
   background: #E08B53;
-  width: 100%;
+  max-width: 100%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
