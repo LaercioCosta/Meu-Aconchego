@@ -1,0 +1,330 @@
+<?php
+require_once './php/Produtos.php';
+require_once './php/usuario.php';
+include './php/carrinho.class.php';
+
+$objproduto = new Produtos();
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Aconchego</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/secunStyle.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body onunload="myfunction()">
+
+  <header>
+    <div class="Nova__NavBar">
+      <div>
+        <section class="Novo__Grid Novo__grid-template">
+
+          <a class="logo__Nov grid_Logo" href="index.php">
+            <div class="item__Novo"></div>
+          </a>
+
+          <center>
+            <div class="item__Novo">
+              <div class="Menu__Novo">
+                <div class="subContainer">
+                  <li class="dropdown Menu__Responsivo" style="flex-grow: 1;">
+                    <a href="#" class="dropdown-toggle-hide" data-toggle="dropdown" role="button"
+                      aria-expanded="false"><i class="fa fa-bars" style="float: left;"></i>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a class="drops_menu" href="PainelProdutos.php">Produtos</a></li>
+                      <li><a class="drops_menu" href="sobre.php">Sobre</a></li>
+                      <li><a class="drops_menu" href="contatos.php">Contatos</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header" style="color: white"></li>
+                      <li><i class="fa fa-user" style="color: white ;"></i>
+                        <a class="drops_menu" id="ContaDrop" href="Entrar.php"></a>
+                        <a class="drops_menu" id="Conta" href="ContaCliente.php"></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="Menu__Item" style="flex-grow: 1;"><a href="sobre.php">Sobre</a></li>
+                  <li class="Menu__Item" style="flex-grow: 1;"><a href="PainelProdutos.php">Produtos</a></li>
+                  <li class="Menu__Item" style="flex-grow: 1;"><a href="contatos.php">Contatos</a></li>
+                </div>
+              </div>
+            </div>
+          </center>
+
+          <center>
+            <div class="item__Novo grid_Criar">
+              <div class="Criar">
+                <span class="CriarConta__subcontainer01" data-logged-user="false">
+                  <li style=" margin-right: 7px; "><i class="fa fa-user" style="color: white ;"></i></li>
+                  <li>
+                   <a id="Conta2" class="dropdown-toggle-hide" data-toggle="dropdown" role="button"
+                      aria-expanded="false">
+                      <?php if(isset($_SESSION['id'])){
+                          echo $_SESSION['msg'] = "Bem Vindo ";
+                          echo $_SESSION['nome'];
+                         
+                      ?>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="drops_menu" style="color: white">Área Do Cliente</li>
+                        <p>
+                          <li><a class="drops_menu" href="ContaAdmin.php">Conta</a></li>
+                          <li><a class="drops_menu" href="#">Pedidos</a></li>
+                          <li><a class="drops_menu" href="#">Acesso e Segurança</a></li>
+                          <li><a class="drops_menu" href="#">Enderços</a></li>
+                          <li><a class="drops_menu" id="SairConta" href="./php/SairConta.php">Sair da Conta</a></li>
+                      </ul>
+                    </a>
+                    <?php }else{ ?>
+                    <a id="Entrar" class="" href="Entrar.php">entrar</a>
+                    <li style="margin-left: 10px;">
+                    <a id="CriarConta" class="" href="CriarConta.php">Criar Conta</a>
+                    </li> 
+                    <?php  } ?>
+                  </li>
+                </span>
+              </div>
+            </div>
+          </center>
+
+          <div class="item__Novo grid_Buscar">
+            <div class="barra_Buscar">
+              <input type="search" placeholder="Buscar Produto" />
+              <button type="submit" class="btn_Buscar" style="display:flex; align-items: center;">
+                <i class="fa fa-search" style="align-items: center; justify-content: center;"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="item__Novo Grid_Comprar">
+            <div class="incons_Compra">
+              <div style="margin-left: 10px;">
+                <a href="carrinho.php" style="text-decoration:none;">
+                  <div class="bag">
+                    <div class="back_NumCarrinho">
+                      <span class="NumCarrinho" id='cart'>0
+                      </span>
+                    </div>
+                    <div class="icon "><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    
+    <center>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide "
+      style="width: 100%;" data-bs-ride="carousel">
+      <div class="carousel-inner" style="
+      margin: auto;
+      width: 100%;
+      object-fit: cover;
+      background-color: #C0C0C0;">
+      
+        <div class="carousel-item active">
+         <h5>Entrega para todo Brasil</h5>
+        </div>
+        <div class="carousel-item">
+          <h5>Compra facilidada com Mercado Pago</h5>
+        </div>
+        <div class="carousel-item">
+          <h5>Parcele em até x12</h5>
+        </div>
+      </div>
+
+
+      <button class="carousel-control-prev" style="margin-left: 40vh;" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" style="margin-right: 40vh; color: black" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </center>
+  <br>
+
+        
+    <div class="Redes__Sociais">
+      <div class="show" id="showId">
+          <i></i>
+      </div>
+      <div class="Social">
+          <div class="Socials instagram">
+              <a href="https://www.instagram.com/meuaconchego.byam/?hl=pt-br">
+                  <img src="https://cidadedosoltransportes.com.br/wp-content/themes/cidadedosol/instagram.png"
+                      style="height:60px; width: 60px;" class="fa fa-instagram"></img></a>
+          </div>
+          <div class="Socials whatsapp">
+              <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571993551934">
+                  <img src="https://i0.wp.com/www.clker.com/cliparts/3/c/c/9/14798007281956560960whatsapp%20trans.med.png"
+                      style="height:45px; width: 50px;" class="fa fa-instagram"></img></a>
+          </div>
+
+      </div>
+  </div>
+  </header>
+
+
+
+
+  <!-- Carrosel silide -->
+  <br>
+
+  <center>
+    <div id="carouselExampleControlsNoTouching" class="carousel slide carousel-fade " data-bs-ride="carousel" style=" width: 50%;">
+      <div class="carousel-inner" style="margin: auto;
+    display: block;
+    width: 100%;
+    object-fit: cover;">
+
+        <?php
+          $queryPodutos = ("SELECT * FROM produto ORDER BY id_Produto DESC");
+          $stmt = $objproduto -> runQuery($queryPodutos);
+          $stmt -> execute();
+          $calcular = 0;  
+          
+            if(($fecthProduto = $stmt->fetchObject())) {
+        ?>
+
+        <div class="carousel-item active">
+          <img style="width: 100%; height: 550px;" src="./fotosProdutos/calcinha higiênica.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img style="width: 100%; height: 550px;" src="./fotosProdutos/Caminha pet.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img style="width: 100%; height: 550px;" src="./fotosProdutos/Max laço.jpeg" class="d-block w-100" alt="...">
+        </div>
+            
+        <?php } ?>
+
+      </div>
+
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </center>
+  <br><br>
+
+
+  <div class="container">
+    <h1 style="font-family: Roboto, sans-serif;">Novidades</h1>
+    <hr>
+    <br>
+    <center>
+      <div clas="row" style="display:flex; justify-content:center;">
+      <?php
+          $queryPodutos = ("SELECT * FROM produto ORDER BY id_Produto DESC");
+          $stmt = $objproduto -> runQuery($queryPodutos);
+          $stmt -> execute();
+          $calcular = 0;          
+          while($calcular <= 2){
+            if(($fecthProduto = $stmt->fetchObject())) {
+        ?>
+          <?$nomedaFoto = $fecthProduto['imagen'];?>
+          <div class="col-lg-4">
+            <div class="cartao_Novidades" style="width: 90%;">
+              <img style="width: 100%; height: 350px;" src="./fotosProdutos/<?php echo $fecthProduto->imagen;?>" class="Primeira_imagem" />
+              <div class="corpo_Cartao">
+                <div class="cor_Cartao_Ocul">
+                  <a href="produtos.php?produtoid=<?php echo $fecthProduto->id_Produto; ?>" class="btn_AddCarrinho">
+                    <center><button style="width:100%">Mais Detalhes</button></center>
+                  </a>
+                  <h5>
+                    <center>R$:<?php echo number_format($fecthProduto->valor, 2 , ',' , '.'); ?> </center>
+                  </h5>
+                </div>
+                <hr>
+                <center>
+                  <h5 class="titulo_Cartao"><?php echo $fecthProduto->nome; ?></h5>
+                </center>
+              </div>
+            </div>
+          </div>
+
+      <?php } $calcular++; } ?>
+      </div>
+      </div>
+<br><br><br><br>
+
+<footer style="margin-top: 20vh;" >
+    <section class="grindRodape ">
+
+    <center>
+      <div class="Site" >
+        <div class="Mapadosite">
+          <h4>Mapa do site</h4>
+          <hr>
+          <h5>
+              <li><a href="PainelProdutos.php">Produtos</a></li>
+              <li><a href="sobre.php">Sobre</a></li>
+              <li><a href="contatos.php">Contatos</a></li>
+              <li><a href="ContaAdmin.php">Conta</a></li>
+          </h5>
+        </div>
+
+        <div class="Midiassociais" style="margin-left: 3vh;"> 
+        <h4>Mídias sociais</h4>
+          <hr>
+          <h5>
+              <li><a href="https://api.whatsapp.com/send?1=pt_BR&phone=5571993551934">Whatsapp</a></li>
+              <li><a href="https://www.instagram.com/meuaconchego.byam/?hl=pt-br">Instagram</a></li>
+          </h5>
+        </div>
+      </div>
+    </center>
+
+      <center>
+        <div class="Mapa">
+          <div style="height: 100%; width: 100%">
+          <img src="./Imagens/Mapa.png" style="height: 100%; width: 100%" >
+          </div>
+        </div>
+      </center>
+
+      <center>
+      <div class="FormasPag">
+      <div style="height: 100%; width: 100%">
+      <img src="./Imagens/Mercadopago.png" style="height: 10%; width: 100%" >
+            </div>
+      </div>
+      </center>
+    </section>
+  </footer>
+        
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
